@@ -30,8 +30,6 @@ This app is designed to address the difficulty of sharing large videos on mobile
 4. **Firebase account** for authentication.
 5. **Python** and **Boto3** installed on the backend.
 
-## Getting Started
-
 ## Steps to Start the Flask Server and React Native Expo App
 
 Follow the steps below to set up and start both the Flask backend and React Native frontend:
