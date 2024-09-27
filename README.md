@@ -32,19 +32,95 @@ This app is designed to address the difficulty of sharing large videos on mobile
 
 ## Getting Started
 
-Follow the steps below to start the Flask server and the React Native Expo app.
+## Steps to Start the Flask Server and React Native Expo App
 
-### Prerequisites
+Follow the steps below to set up and start both the Flask backend and React Native frontend:
 
-Make sure you have the following installed:
+### Backend (Flask)
 
-1. **Node.js and npm**: Install from [here](https://nodejs.org/).
-2. **React Native CLI**: Install globally by running:
-   ```bash
-   npm install -g expo-cli
-3. **AWS S3**: Ensure you have an AWS account and an S3 bucket set up. [AWS S3 Documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)
-4. **Firebase**: Create a Firebase account for authentication. [Firebase Authentication Documentation](https://firebase.google.com/docs/auth)
-5. **Python**: Ensure Python is installed. You can download it [here](https://www.python.org/downloads/).
-6. **Boto3**: Install the AWS SDK for Python by running the following command:
-   ```bash
-   pip install boto3
+1. **Clone the Repository:**
+   - Navigate to the folder where you'd like to clone the repository and run:
+     ```bash
+     git clone <your-repo-url>
+     cd backend
+     ```
+
+2. **Set Up Virtual Environment:**
+   - Create a virtual environment:
+     ```bash
+     python -m venv venv
+     ```
+   - Activate the virtual environment:
+     - macOS/Linux:
+       ```bash
+       source venv/bin/activate
+       ```
+     - Windows:
+       ```bash
+       venv\Scripts\activate
+       ```
+
+3. **Install Dependencies:**
+   - Install the required dependencies listed in the `requirements.txt` file:
+     ```bash
+     pip install -r requirements.txt
+     ```
+
+4. **Start the Flask Server:**
+   - Run the Flask development server:
+     ```bash
+     flask run
+     ```
+
+   The Flask server will be running at `http://127.0.0.1:5000`.
+
+### Frontend (React Native with Expo)
+
+1. **Install Node.js and npm:**
+   - Ensure Node.js and npm are installed. You can download them from [Node.js Official Website](https://nodejs.org/).
+
+2. **Install React Native CLI and Expo:**
+   - Install Expo CLI globally by running:
+     ```bash
+     npm install -g expo-cli
+     ```
+
+3. **Navigate to the React Native App Folder:**
+   - From the root directory, navigate to the `react-native-app` folder:
+     ```bash
+     cd react-native-app
+     ```
+
+4. **Install Node Dependencies:**
+   - Install all the required npm dependencies:
+     ```bash
+     npm install
+     ```
+
+5. **Start the Expo Development Server:**
+   - Start the Expo server:
+     ```bash
+     expo start
+     ```
+
+6. **Run the App on Your Device or Emulator:**
+   - Use the Expo Go app to scan the QR code from your terminal or browser.
+   - Alternatively, you can run the app on an iOS/Android emulator.
+
+### AWS and Firebase Setup
+
+1. **AWS S3 Setup:**
+   - Ensure your AWS credentials are set up by running:
+     ```bash
+     aws configure
+     ```
+   - Confirm your Flask app is configured to handle S3 uploads.
+
+2. **Firebase Authentication Setup:**
+   - Set up Firebase authentication by following the [Firebase setup guide](https://firebase.google.com/docs/auth).
+   - Ensure you have installed Firebase in the React Native app with:
+     ```bash
+     npm install --save @react-native-firebase/app @react-native-firebase/auth
+     ```
+
+Now you should have the backend Flask server running and the frontend React Native Expo app available for use.
